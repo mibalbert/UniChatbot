@@ -1,0 +1,472 @@
+version: "3.0"
+
+stories:
+- story: happy general path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+
+
+- story: interactive_story_1
+  steps:
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_timetable
+  - action: utter_ask_timetable
+  # - intent: ask_timetable_day
+  # - action: action_ask_timetable_day
+  # - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_great
+  - intent: bye
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_timetable
+  - action: utter_ask_timetable
+  # - intent: ask_timetable_week
+  # - action: action_ask_timetable_week
+  # - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_great
+  - intent: bye
+  - action: utter_goodbye
+
+
+- story: interactive_story_3
+  steps:
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_assignments
+    entities:
+    - assignment: assignment
+  - action: action_ask_assesment_info
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_great
+  - intent: bye
+  - action: utter_goodbye
+
+- story: interactive_story_4
+  steps:
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_books_list
+  - action: utter_ask_all_books
+  - action: utter_ask_Harry_Potter_and_the_Philosopher_s_Stone
+  - action: utter_ask_Harry_Potter_and_The_Sorcerer_s_Stone
+  - action: utter_did_that_help
+  - intent: thank
+  - action: utter_great
+  - action: utter_something_else
+  - intent: deny
+  - action: utter_ask_let_me_know
+
+
+
+- story: interactive_story_5
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_grades
+    entities:
+    - grade: grades
+  - action: action_ask_grades
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+
+
+- story: interactive_story_6
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_module_information
+    entities:
+    - grade: module
+  - action: action_ask_modules_info
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+
+
+
+
+- story: interactive_story_7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_academic_regulations
+  - action: utter_ask_academic_regulations
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+
+
+
+- story: interactive_story_8
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_programme_specification
+  - action: utter_ask_programme_specification
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+
+
+
+- story: interactive_story_9
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_programme_specification_computer_science
+  - action: utter_ask_course_specification_computer_science
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+
+
+
+- story: interactive_story_10
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_programme_specification_ITB
+  - action: utter_ask_programme_spec_ITB
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+
+
+
+- story: interactive_story_11
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_programme_specification_etichal_hacking
+  - action: utter_ask_programme_spec_etichal_hacking
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+
+
+- story: interactive_story_12
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_programme_specification_games_technology
+  - action: utter_ask_programme_spec_games_technology
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+
+- story: interactive_story_13
+  steps:
+  - intent: ask_programme_specification_computer_science
+  - action: utter_ask_course_specification_computer_science
+
+- story: interactive_story_14
+  steps:
+  - intent: ask_programme_specification_ITB
+  - action: utter_ask_programme_spec_ITB
+
+- story: interactive_story_15
+  steps:
+  - intent: ask_programme_specification_etichal_hacking
+  - action: utter_ask_programme_spec_etichal_hacking
+
+- story: interactive_story_16
+  steps:
+  - intent: ask_programme_specification_games_technology
+  - action: utter_ask_programme_spec_games_technology
+
+
+- story: interactive_story_17
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_eec_handbook
+  - action: utter_ask_eec_handbook
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+
+
+- story: interactive_story_18
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_general_information
+  - action: utter_ask_general_information
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+
+- story: interactive_story_19
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_what_is_possible
+  - action: action_all_actions
+  - intent: thank
+  - action: utter_great
+
+
+- story: interactive_story_20
+  steps:
+  - intent: ask_what_is_possible
+  - action: action_all_actions
+
+
+
+
+
+- story: interactive_story_21
+  steps:
+  - intent: ask_grades
+    entities:
+    - grade: grades
+  - action: action_ask_grades
+  - intent: thank
+  - action: utter_great
+
+# - story: interactive_story_22
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_supervisor_meeting_availability
+#   - action: utter_ask_supervisor_meeting_availability_date
+#   - intent: ask_supervisor_meeting_availability_date
+#   - action: utter_ask_choose_meeting_time
+#   - intent: ask_supervisor_meeting_availability_time
+#   - action: utter_ask_meeting_made
+#   - intent: thank
+#   - action: utter_great
+#   - intent: ask_module_information
+#     entities:
+#     - module: modules
+#   - action: action_ask_modules_info
+#   - action: utter_something_else
+#   - intent: ask_good_for_now
+#   - action: utter_ask_let_me_know
+
+- story: interactive_story_22
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_form_extension_deferral
+  - action: utter_ask_form_extension_deferral
+  - action: utter_something_else
+  - intent: deny
+  - action: utter_ask_let_me_know
+  - intent: affirm
+  - action: utter_goodbye
+
+- story: interactive_story_22.1
+  steps:
+  - intent: ask_form_extension_deferral
+  - action: utter_ask_form_extension_deferral
+
+
+- story: interactive_story_23
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_eec_handbook
+  - action: utter_ask_eec_handbook
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+- story: interactive_story_23.1
+  steps:
+  - intent: ask_eec_handbook
+  - action: utter_ask_eec_handbook
+
+
+- story: interactive_story_24
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_video_week_1
+  - action: action_ask_video_week_1
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+
+- story: interactive_story_24.1
+  steps:
+  - intent: ask_video_week_1
+  - action: action_ask_video_week_1
+
+
+# - story: interactive_story_24
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_user_is_good
+#   - action: utter_ask_user_is_good
+#   - intent: ask_video_week_1
+#   - action: action_ask_video_week_1
+#   - action: utter_something_else
+#   - intent: ask_good_for_now
+#   - action: utter_ask_let_me_know
+#   - intent: thank
+#   - action: utter_great
+
+# - story: interactive_story_25.1
+#   steps:
+#   - intent: ask_video_week_1
+#   - action: action_ask_video_week_1
+
+
+- story: interactive_story_25
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_module_teacher_information
+  - action: action_ask_teacher_info
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+- story: interactive_story_25.1
+  steps:
+  - intent: ask_module_teacher_information
+  - action: action_ask_teacher_info
+
+
+- story: interactive_story_26
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_Harry_Potter_and_The_Sorcerer_s_Stone
+  - action: utter_ask_Harry_Potter_and_The_Sorcerer_s_Stone
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+- story: interactive_story_26.1
+  steps:
+  - intent: ask_Harry_Potter_and_The_Sorcerer_s_Stone
+  - action: utter_ask_Harry_Potter_and_The_Sorcerer_s_Stone
+
+
+- story: interactive_story_27
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_Harry_Potter_and_the_Philosopher_s_Stone
+  - action: utter_ask_Harry_Potter_and_the_Philosopher_s_Stone
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+- story: interactive_story_27.1
+  steps:
+  - intent: ask_Harry_Potter_and_the_Philosopher_s_Stone
+  - action: utter_ask_Harry_Potter_and_the_Philosopher_s_Stone
+
+
+- story: interactive_story_28
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_joke
+  - action: action_give_joke
+  - action: utter_something_else
+  - intent: ask_good_for_now
+  - action: utter_ask_let_me_know
+  - intent: thank
+  - action: utter_great
+
+- story: interactive_story_28.1
+  steps:
+  - intent: ask_joke
+  - action: action_give_joke
+
+
+
+

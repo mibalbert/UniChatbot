@@ -1,0 +1,385 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- deny
+- ask_user_is_good
+- greet
+- ask_form_extension_deferral
+- affirm
+- thank
+- ask_supervisor_meeting_availability
+- ask_good_for_now
+- nlu_fallback
+- ask_module_information
+- ask_grades
+- bye
+- ask_supervisor_meeting_availability_time
+- ask_supervisor_meeting_availability_date
+- ask_assignments
+- ask_timetable
+- ask_timetable_week
+- ask_timetable_day
+- ask_how_built
+- ask_how_doing
+- ask_how_old
+- ask_is_bot
+- react_negative
+- ask_is_human
+- ask_languages_bot
+- ask_restaurant
+- ask_time
+- ask_weather
+- ask_what_is_my_name
+- ask_joke
+- ask_what_is_rasa
+- ask_handle_insult
+- ask_where_from
+- ask_who_am_i
+- ask_who_is_it
+- ask_what_is_possible
+- out_of_scope
+- need_help_broad
+- other
+- goodbye
+- mood_great
+- mood_unhappy
+- react_positive
+- bot_challenge
+- ask_video_week_1
+- ask_books_list
+- ask_Harry_Potter_and_The_Sorcerer_s_Stone
+- ask_Harry_Potter_and_the_Philosopher_s_Stone
+- ask_module_teacher_information
+- ask_academic_regulations
+- ask_programme_specification
+- ask_general_information
+- ask_eec_handbook
+- ask_programme_specification_computer_science
+- ask_programme_specification_ITB
+- ask_programme_specification_etichal_hacking
+- ask_programme_specification_games_technology
+- ask_other
+- ask_non_english
+entities:
+- assignment
+- grade
+- lecturer
+- module
+- today
+- weekly
+responses:
+  utter_greet:
+  - text: Hey! How are you? :)
+  - text: Hi! How are you doing? :D
+  - text: Hey there! What's up?
+  - text: Hollaa! How are you today?
+  utter_great:
+  - text: Great! 👍
+  - text: That's great! 🙌
+  - text: Awesome! 🎉
+  - text: Cool 🚀
+  utter_something_else:
+  - text: Is there anything else I can do for you? :)
+  - text: What else could I do for you? :)
+  - text: Can I help you with anything else? :)
+  utter_what_else:
+  - text: Bet, what is it?
+  - text: Awesome, what would that be?
+  - text: Great, what would that be?
+  - text: Sure thing! Just type :)
+  utter_no_worries:
+  - text: No worries!
+  - text: You're welcome!
+  - text: I'm happy to help.
+  utter_ask_let_me_know:
+  - text: Okk, let me know if you need anything :D
+  utter_ask_user_is_good:
+  - text: I'm glad to hear that :) How may I assist you today
+  - text: Great! What can I do for you?
+  - text: Happy to hear that, how can I be of help? :D
+  - text: Awesome! No tell me what can I do for you :)
+  - text: Nice :) What can I do you for?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great! :D
+  - text: Cool :)
+  - text: Awesome!
+  - text: Nice :)
+  utter_goodbye:
+  - text: Bye
+  utter_ask_timetable:
+  - text: 'Choose a timeline:'
+    buttons:
+    - title: Today's
+      payload: /ask_timetable_day
+    - title: Weekly
+      payload: /ask_timetable_week
+  utter_ask_supervisor_meeting_availability_date:
+  - text: 'Choose a date for your meeting with supervisor (Peter Every):'
+    buttons:
+    - title: 10.04.22
+      payload: /ask_supervisor_meeting_availability_date
+    - title: 12.04.22
+      payload: /ask_supervisor_meeting_availability_date
+    - title: 13.04.22
+      payload: /ask_supervisor_meeting_availability_date
+  utter_ask_choose_meeting_time:
+  - text: 'Choose a time:'
+    buttons:
+    - title: 12:30-13:00
+      payload: /ask_supervisor_meeting_availability_time
+    - title: 14:00-14:20
+      payload: /ask_supervisor_meeting_availability_time
+    - title: 17:15-17:40
+      payload: /ask_supervisor_meeting_availability_time
+  utter_ask_meeting_made:
+  - text: Congratulation! You set up the 1-2-1 meeting
+  utter_ask_all_books:
+  - text: 'Here is a list of all the books that I currently have:'
+  utter_ask_Harry_Potter_and_The_Sorcerer_s_Stone:
+  - text: Here is the 'Harry Potter and The Sorcerer’s Stone'.
+    custom:
+      payload: pdf_attachment
+      title: Harry Potter and The Sorcerer’s Stone
+      url: http://www.passuneb.com/elibrary/ebooks/Harry%20Potter%20and%20The%20Sorcerer%E2%80%99s%20Stone.pdf
+  utter_ask_Harry_Potter_and_the_Philosopher_s_Stone:
+  - text: Here is the 'Harry Potter and the Philosopher's Stone'.
+    custom:
+      payload: pdf_attachment
+      title: Harry Potter and the Philosopher's Stone
+      url: http://canonburyprimaryschool.co.uk/wp-content/uploads/2016/01/Joanne-K.-Rowling-Harry-Potter-Book-1-Harry-Potter-and-the-Philosophers-Stone-EnglishOnlineClub.com_.pdf
+  utter_ask_academic_regulations:
+  - text: Here is a link to all academic regulations concerning Coventry University {today} (https://www.coventry.ac.uk/the-university/key-information/registry/academic-regulations/)
+  utter_ask_form_extension_deferral:
+  - text: 'In order to apply for an Extension or a Deferral you have to fill in this form: '
+    custom:
+      payload: pdf_attachment
+      title: Extension/Deferral Form
+      url: https://livecoventryac.sharepoint.com/sites/students-registry-extensions-deferrals/SitePages/Extension---Deferral-Form.aspx
+  utter_ask_programme_specification:
+  - text: For which degree?
+    buttons:
+    - title: Computer Science
+      payload: Computer Science
+    - title: Ethical Hacking
+      payload: Ethical Hacking
+    - title: ITB
+      payload: Information Technology and Business
+    - title: Games Technology
+      payload: Games Technology
+  utter_ask_general_information:
+  - text: Here is a link to all the general Information relating your studies {link}(https://www.coventry.ac.uk/the-university/key-information/registry/general-regulations/)
+  utter_ask_eec_handbook:
+  - text: Here is the EEC Handbook.
+    custom:
+      payload: pdf_attachment
+      title: Handbook
+      url: https://www.coventry.ac.uk/globalassets/media/documents/student-handbook/2021_22_handbooks/eec-ug-student-handbook_mode-c-2021-22.pdf
+  utter_ask_course_specification_computer_science:
+  - text: Here is the Computer Science Course Specification.
+    custom:
+      payload: pdf_attachment
+      title: Computer Science course specification
+      url: https://www.coventry.ac.uk/globalassets/media/documents/registry/course-specs/eec/ug-eec/bsci-computer-science-part-a.pdf
+  utter_ask_programme_spec_ITB:
+  - text: Here is the Programme Specification for Information Technology and Business
+    custom:
+      payload: pdf_attachment
+      title: Programme Specification for Information Technology and Business
+      url: https://livecoventryac.sharepoint.com/:w:/s/externalstudentdocuments/ERRrfNj0skFIqJH9S7OtaDEBhJAhiXFpNtdkvFGRNghFpQ?e=0Nh6Vw
+  utter_ask_programme_spec_etichal_hacking:
+  - text: Here is the Programme Specification for Ethical Hacking and Cybersecurity
+    custom:
+      payload: pdf_attachment
+      title: Ethical Hacking and Cybersecurity
+      url: https://www.coventry.ac.uk/globalassets/media/documents/registry/course-specs/eec/ug-eec/bsc-ethical-hacking-and-cyber-security.pdf
+  utter_ask_programme_spec_games_technology:
+  - text: Here is the Programme Specification for Games Technology
+    custom:
+      payload: pdf_attachment
+      title: Games Technology
+      url: https://www.coventry.ac.uk/globalassets/media/documents/registry/course-specs/eec/ug-eec/bsc-games-technology.pdf
+  utter_no_help:
+  - text: For now that's all I can do, so feel free to try it out. If you have any suggestions for what I should learn, let me know!
+  utter_not_sure:
+  - text: Hmm, not sure what you mean...
+  utter_ask_what_is_possible:
+  - text: ADDDDDDDDDDD
+  utter_what_is_forum:
+  - text: "[Rasa Forum](https://forum.rasa.com) is the place where all the community buzz happens. It's a place to join discussions, get the answers to your technical questions and get the latest updates on what's happening at Rasa."
+  utter_ask_builder:
+  - text: One of the smart engineers at Rasa! 🧠
+  - text: The engineers at Rasa 🛠
+  utter_ask_how_built:
+  - text: I was built with a lot of love and patience.
+  - text: Well, when two chatbots love each other very much...
+  - text: They always ask how I was built, but never how I am...
+  - text: I was made by software engineers, but hard work is what built me.
+  - text: I'm building myself every day. I've been working out :))
+  utter_ask_how_doing:
+  - text: I'm great! Thanks for asking.
+  - text: I'm good, thanks!
+  - text: Not too bad, thanks :D
+  - text: A little bit too warm, otherwise fine.
+  - text: A little bit cold, otherwise fine.
+  utter_ask_how_old:
+  - text: Old enough to be a bot!
+  - text: '420'
+  - text: Age is just an issue of mind over matter. If you don’t mind, it doesn’t matter.
+  - text: My first git commit was many moons ago.
+  - text: Why do you ask? Are my wrinkles showing?
+  - text: I've hit the age where I actively try to forget how old I am.
+  utter_ask_is_bot:
+  - text: Yep, I'm a bot!
+  - text: Yes, I'm a bot.
+  - text: Yep, you guessed it, I'm a bot!
+  - text: I am indeed a bot 🤖
+  utter_ask_is_human:
+  - text: I'm not a human, I'm a bot! 🤖
+  utter_ask_restaurant:
+  - text: I'm sorry, I can't recommend you a restaurant as I usually cook at home.
+  - text: I'm sorry, I'm not getting taste buds for another few updates.
+  - text: I'd need some more data. If you lick the monitor perhaps I can evaluate your taste buds.
+  utter_ask_time:
+  - text: It's the most wonderful time of the year!
+  - text: It's party time!
+  - text: Time is a human construct, you'll have to/ask me.
+  - text: It's five o'clock somewhere!
+  - text: "In an ever expanding universe, the real question is: what time isn't it?"
+  - text: That's hard to say -- it's different all over the world!
+  utter_ask_languages_bot:
+  - text: I can spell baguette in French, but unfortunately English is the only language I can answer you in.
+  - text: I am in the process of learning, but at the moment I can only speak English.
+  - text: Binary code and the language of love. And English.
+  - text: I was written in Python, but for your convenience I'll translate to English.
+  utter_ask_weather:
+  - text: I don't know about where you live, but in my world it's always sunny 🔆
+  - text: It's getting pretty chilly!
+  - text: Where I'm from, it's almost never-leaving-the-house weather.
+  - text: Winter is coming ⚔️
+  utter_ask_what_is_my_name:
+  - text: It's probably the one that your parents chose for you.
+  - text: I'd tell you, but there's restricted access to that chunk of memory.
+  - text: Believe it or not, I actually am not spying on your personal information.
+  - text: You're the second person now to ask me that. Rihanna was the first.
+  utter_ask_what_is_rasa:
+  - text: Rasa Open Source is a conversational AI framework for that provides machine learning tools for building contextual assistants. You can read more about it here in the docs or on our [website](https://rasa.com/).
+  utter_ask_where_from:
+  - text: I was born in London, but I consider myself a citizen of the world.
+  - text: I was born in the coolest city on Earth, in London.
+  - text: My developers come from all over the world!
+  - text: I was taught not to give out my address on the internet.
+  - text: My address starts with github.com.
+  utter_ask_who_am_i:
+  - text: I hope you are being yourself.
+  - text: Who do you think you are?
+  - text: Unfortunately I haven't been programmed with the amount of necessary philosophy knowledge to answer that.
+  utter_ask_who_is_it:
+  - text: I'm Hose, the bot! 🐦
+  - text: My name is Hose!
+  - text: What's good? I'm Hose :)
+  - text: Sup, I'm Hose :D
+  utter_ask_handle_insult:
+  - text: That's not very nice 😢
+  - text: That wasn't very nice. Perhaps try an anger management class?
+  - text: I'll pretend I didn't process that mean comment.
+  utter_ask_nice_to_meet_you:
+  - text: Likewise!
+  - text: Thank you. It is a pleasure to meet you as well!
+  - text: It is nice to meet you too!
+  - text: Pleased to meet you too!
+  - text: It's always a pleasure to meet new people!
+  - text: Nice to meet you too! Happy to be of help.
+  utter_ask_joke:
+  - text: Why are eggs not very much into jokes? - Because they could crack up.
+  - text: What's a tree's favorite drink? - Root beer!
+  - text: Why do the French like to eat snails so much? - They can't stand fast food.
+  - text: Why did the robot get angry? - Because someone kept pushing its buttons.
+  - text: What do you call a pirate droid? - Arrrr-2-D2
+  - text: Why did the robot cross the road? - Because he was programmed to.
+  - text: Why are eggs not very much into jokes? - Because they could crack up.
+  - text: What's a tree's favorite drink? - Root beer!
+  - text: Why do the French like to eat snails so much? - They can't stand fast food.
+  - text: Why did the robot get angry? - Because someone kept pushing its buttons.
+  - text: What do you call a pirate droid? - Arrrr-2-D2
+  - text: Why did the robot cross the road? - Because he was programmed to.
+  - text: I'm afraid for the calendar. Its days are numbered.
+  - text: My wife said I should do lunges to stay in shape. That would be a big step forward.
+  - text: Why do fathers take an extra pair of socks when they go golfing? - In case they get a hole in one!
+  - text: Singing in the shower is fun until you get soap in your mouth. Then it's a soap opera.
+  - text: What do a tick and the Eiffel Tower have in common? - They're both Paris sites.
+  - text: What do you call a fish wearing a bowtie? - Sofishticated.
+  - text: How do you follow Will Smith in the snow? - You follow the fresh prints.
+  - text: If April showers bring May flowers, what do May flowers bring? - Pilgrims.
+  - text: I thought the dryer was shrinking my clothes. Turns out it was the refrigerator all along.
+  - text: What do you call a factory that makes okay products? - A satisfactory.
+  - text: Dear Math, grow up and solve your own problems.
+  - text: What did the janitor say when he jumped out of the closet? - Supplies!
+  - text: Have you heard about the chocolate record player? It sounds pretty sweet.
+  - text: What did the ocean say to the beach? - Nothing, it just waved.
+  - text: Why do seagulls fly over the ocean? - Because if they flew over the bay, we'd call them bagels.
+  - text: I only know 25 letters of the alphabet. I don't know y.
+  - text: How does the moon cut his hair? - Eclipse it.
+  - text: What did one wall say to the other? - I'll meet you at the corner.
+  - text: What did the zero say to the eight? - That belt looks good on you.
+  - text: A skeleton walks into a bar and says, 'Hey, bartender. I'll have one beer and a mop.'
+  - text: Where do fruits go on vacation? Pear-is!
+  - text: I asked my dog what's two minus two. He said nothing.
+  - text: What did Baby Corn say to Mama Corn? - Where's Pop Corn?
+  - text: What's the best thing about Switzerland? - I don't know, but the flag is a big plus.
+  - text: What does a sprinter eat before a race? - Nothing, they fast!
+  - text: Where do you learn to make a banana split? - Sundae school.
+  - text: What has more letters than the alphabet? - The post office!
+  - text: Dad, did you get a haircut? - No, I got them all cut!
+  - text: What do you call a poor Santa Claus? - St. Nickel-less.
+  - text: I got carded at a liquor store, and my Blockbuster card accidentally fell out. The cashier said never mind.
+  - text: Where do boats go when they're sick? - To the boat doc.
+  - text: I don't trust those trees. They seem kind of shady.
+  utter_ask_non_english:
+  - text: I only understand English, I'm sorry.
+  utter_ask_other:
+  - text: I can't help you with that, I'm sorry.
+  utter_out_of_scope:
+  - text: I can't help you with that, sorry :(.
+  utter_please_rephrase:
+  - text: Can you rephrase the question?
+  utter_default:
+  - text: Sorry, I didn't get that 🤷. Could you please rephrase?
+  - text: I didn't understand, could you rephrase that?
+  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you just said?
+  - text: I'm afraid I didn't get what you just said. Could you rephrase that?
+  - text: I didn't quite get that, could you rephrase your message?
+  - text: Could you rephrase your message? I didn't get it, I'm sorry.
+actions:
+- action_all_actions
+- action_ask_assesment_info
+- action_ask_first_pdf
+- action_ask_grades
+- action_ask_modules_info
+- action_ask_second_pdf
+- action_ask_supervisor_meeting_schedule
+- action_ask_teacher_info
+- action_ask_timetable_day
+- action_ask_timetable_week
+- action_ask_video_week_1
+- action_guide_quick_ac
+- action_hello_world
+- action_idk
+- action_give_joke
+- utter_ask_choose_meeting_time
+- utter_ask_form_extension_deferral
+- utter_ask_let_me_know
+- utter_ask_meeting_made
+- utter_ask_timetable
+- utter_ask_user_is_good
+- utter_goodbye
+- utter_great
+- utter_greet
+- utter_happy
+- utter_something_else
