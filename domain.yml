@@ -3,6 +3,7 @@ session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 intents:
+- ask_shoes_jordans
 - deny
 - ask_user_is_good
 - greet
@@ -357,6 +358,7 @@ responses:
   - text: I didn't quite get that, could you rephrase your message?
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
 actions:
+- action_ask_shoes_jordans
 - action_all_actions
 - action_ask_assesment_info
 - action_ask_first_pdf

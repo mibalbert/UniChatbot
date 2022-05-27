@@ -7,6 +7,12 @@ stories:
   - action: utter_greet
 
 
+- story: interactive_story_0
+  steps:
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_shoes_jordans
+  - action: action_ask_shoes_jordans
 
 - story: interactive_story_1
   steps:

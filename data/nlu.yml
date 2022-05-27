@@ -1,5 +1,13 @@
 version: "3.0"
 nlu:
+
+- intent: ask_shoes_jordans
+  examples: |
+    - Show me the jordans
+    - Jordans
+    - gimme some jordans baby
+    - can you please show me some jordans
+
 - intent: affirm
   examples: |
     - Accept

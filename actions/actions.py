@@ -8,6 +8,9 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+import json
+from bs4 import BeautifulSoup
+import requests
 import pyjokes
 from datetime import time
 
@@ -81,6 +84,77 @@ class ActionAllActions(Action):
         ##dispathcer.utter_message(text="type help if you want to see all the actions I can do!")
 
         return []
+
+
+
+
+
+
+class ActionShoesJordans(Action):
+
+    def name(self) -> Text:
+        return "action_ask_shoes_jordans"
+
+    def run(self, dispathcer: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text ,Any]]:
+
+        hrefs = []
+        names = []
+        imags = [] 
+
+        url = "https://www.nike.com/gb/w/mens-jordan-shoes-37eefznik1zy7ok"
+        result = requests.get(url)
+        doc = BeautifulSoup(result.text, "html.parser")
+        link = doc.find_all(class_="product-card__link-overlay")
+        imgs = doc.find_all(class_="wall-image-loader css-1la3v4n")
+
+        data = {}
+
+        for a in link:
+            href = a.get("href")
+            # print(href)
+            hrefs.append(href)
+
+            name = ''.join(a.find_all(text=True))
+            # print(name)
+            names.append(name)
+
+        for x in imgs:
+            img = x.find("noscript").find("img").get("src")
+            # print(img)
+            imags.append(img)
+
+        data2 = []     
+        for s in range(len(imags)):
+            datas = {
+                    "image": imags[s],
+                    "title": names[s],
+                    "href": hrefs[s],
+                    }
+            data2.append(datas)
+
+
+        data = {
+                "payload": "cardsCarousel2",
+                "data": data2
+            }
+
+        print(data)
+
+        dispathcer.utter_message(text="Here are some Jordans:",json_message=data)        
+        #end = time.time()
+        # print(f"The time it took is: {end-startTime}")
+
+        return []
+
+
+
+
+
+
+
+
 
 
 class ActionTimetableDay(Action):
