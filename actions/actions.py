@@ -140,7 +140,6 @@ class ActionShoesJordans(Action):
                 "data": data2
             }
 
-        print(data)
 
         dispathcer.utter_message(text="Here are some Jordans:",json_message=data)        
         #end = time.time()
@@ -201,9 +200,8 @@ class ActionShoesRunning(Action):
                 "data": data2
             }
 
-        print(data)
 
-        dispathcer.utter_message(text="Here are some Jordans:",json_message=data)        
+        dispathcer.utter_message(text="Here are some Running shoes:",json_message=data)        
         #end = time.time()
         # print(f"The time it took is: {end-startTime}")
 
@@ -265,9 +263,8 @@ class ActionShoesBasketball(Action):
                 "data": data2
             }
 
-        print(data)
 
-        dispathcer.utter_message(text="Here are some Jordans:",json_message=data)        
+        dispathcer.utter_message(text="Here are some Basketball shoes:",json_message=data)        
         #end = time.time()
         # print(f"The time it took is: {end-startTime}")
 
@@ -328,9 +325,7 @@ class ActionShoesBasketball(Action):
                 "data": data2
             }
 
-        print(data)
-
-        dispathcer.utter_message(text="Here are some Jordans:",json_message=data)        
+        dispathcer.utter_message(text="Here are some Football shoes:",json_message=data)        
         #end = time.time()
         # print(f"The time it took is: {end-startTime}")
 
