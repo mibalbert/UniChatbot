@@ -41,8 +41,8 @@ stories:
   - action: utter_ask_user_is_good
   - intent: ask_timetable
   - action: utter_ask_timetable
-  # - intent: ask_timetable_day
-  # - action: action_ask_timetable_day
+  - intent: ask_timetable_day
+  - action: action_ask_timetable_day
   # - action: utter_something_else
   - intent: ask_good_for_now
   - action: utter_great
@@ -55,8 +55,8 @@ stories:
   - action: utter_ask_user_is_good
   - intent: ask_timetable
   - action: utter_ask_timetable
-  # - intent: ask_timetable_week
-  # - action: action_ask_timetable_week
+  - intent: ask_timetable_week
+  - action: action_ask_timetable_week
   # - action: utter_something_else
   - intent: ask_good_for_now
   - action: utter_great
