@@ -27,6 +27,10 @@ class ActionHelloWord(Action):
         data= [ { "title": "Timetable", "payload": "Show me the timetable" },
                 { "title": "Assignments", "payload": "Show me my upcomming assignments" }, 
                 { "title": "Grades", "payload": "Show me my grades" }, 
+                { "title": "Jordans", "payload": "Show me some Jordans" }, 
+                { "title": "Running", "payload": "Show me some Running shoes" }, 
+                { "title": "Basketball", "payload": "Show me some Basketball shoes" },
+                { "title": "Football", "payload": "Show me some Football shoes" }, 
                 { "title":"help", "payload": "help"} ]
 
         message={"payload":"quickReplies","data":data}
