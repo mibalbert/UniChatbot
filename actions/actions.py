@@ -151,7 +151,190 @@ class ActionShoesJordans(Action):
 
 
 
+class ActionShoesRunning(Action):
 
+    def name(self) -> Text:
+        return "action_ask_shoes_running"
+
+    def run(self, dispathcer: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text ,Any]]:
+
+        hrefs = []
+        names = []
+        imags = [] 
+
+        url = "https://www.nike.com/gb/w/mens-running-shoes-37v7jznik1zy7ok"
+        result = requests.get(url)
+        doc = BeautifulSoup(result.text, "html.parser")
+        link = doc.find_all(class_="product-card__link-overlay")
+        imgs = doc.find_all(class_="wall-image-loader css-1la3v4n")
+
+        data = {}
+
+        for a in link:
+            href = a.get("href")
+            # print(href)
+            hrefs.append(href)
+
+            name = ''.join(a.find_all(text=True))
+            # print(name)
+            names.append(name)
+
+        for x in imgs:
+            img = x.find("noscript").find("img").get("src")
+            # print(img)
+            imags.append(img)
+
+        data2 = []     
+        for s in range(len(imags)):
+            datas = {
+                    "image": imags[s],
+                    "title": names[s],
+                    "href": hrefs[s],
+                    }
+            data2.append(datas)
+
+
+        data = {
+                "payload": "cardsCarousel2",
+                "data": data2
+            }
+
+        print(data)
+
+        dispathcer.utter_message(text="Here are some Jordans:",json_message=data)        
+        #end = time.time()
+        # print(f"The time it took is: {end-startTime}")
+
+        return []
+
+
+
+
+
+
+
+class ActionShoesBasketball(Action):
+
+    def name(self) -> Text:
+        return "action_ask_shoes_basketball"
+
+    def run(self, dispathcer: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text ,Any]]:
+
+        hrefs = []
+        names = []
+        imags = [] 
+
+        url = "https://www.nike.com/gb/w/mens-basketball-shoes-3glsmznik1zy7ok"
+        result = requests.get(url)
+        doc = BeautifulSoup(result.text, "html.parser")
+        link = doc.find_all(class_="product-card__link-overlay")
+        imgs = doc.find_all(class_="wall-image-loader css-1la3v4n")
+
+        data = {}
+
+        for a in link:
+            href = a.get("href")
+            # print(href)
+            hrefs.append(href)
+
+            name = ''.join(a.find_all(text=True))
+            # print(name)
+            names.append(name)
+
+        for x in imgs:
+            img = x.find("noscript").find("img").get("src")
+            # print(img)
+            imags.append(img)
+
+        data2 = []     
+        for s in range(len(imags)):
+            datas = {
+                    "image": imags[s],
+                    "title": names[s],
+                    "href": hrefs[s],
+                    }
+            data2.append(datas)
+
+
+        data = {
+                "payload": "cardsCarousel2",
+                "data": data2
+            }
+
+        print(data)
+
+        dispathcer.utter_message(text="Here are some Jordans:",json_message=data)        
+        #end = time.time()
+        # print(f"The time it took is: {end-startTime}")
+
+        return []
+
+
+
+
+
+
+class ActionShoesBasketball(Action):
+
+    def name(self) -> Text:
+        return "action_ask_shoes_football"
+
+    def run(self, dispathcer: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text ,Any]]:
+
+        hrefs = []
+        names = []
+        imags = [] 
+
+        url = "https://www.nike.com/gb/w/mens-football-shoes-1gdj0znik1zy7ok"
+        result = requests.get(url)
+        doc = BeautifulSoup(result.text, "html.parser")
+        link = doc.find_all(class_="product-card__link-overlay")
+        imgs = doc.find_all(class_="wall-image-loader css-1la3v4n")
+
+        data = {}
+
+        for a in link:
+            href = a.get("href")
+            # print(href)
+            hrefs.append(href)
+
+            name = ''.join(a.find_all(text=True))
+            # print(name)
+            names.append(name)
+
+        for x in imgs:
+            img = x.find("noscript").find("img").get("src")
+            # print(img)
+            imags.append(img)
+
+        data2 = []     
+        for s in range(len(imags)):
+            datas = {
+                    "image": imags[s],
+                    "title": names[s],
+                    "href": hrefs[s],
+                    }
+            data2.append(datas)
+
+
+        data = {
+                "payload": "cardsCarousel2",
+                "data": data2
+            }
+
+        print(data)
+
+        dispathcer.utter_message(text="Here are some Jordans:",json_message=data)        
+        #end = time.time()
+        # print(f"The time it took is: {end-startTime}")
+
+        return []
 
 
 

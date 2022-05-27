@@ -14,6 +14,27 @@ stories:
   - intent: ask_shoes_jordans
   - action: action_ask_shoes_jordans
 
+- story: interactive_story_0.1
+  steps:
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_shoes_running
+  - action: action_ask_shoes_running
+
+- story: interactive_story_0.2
+  steps:
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_shoes_basketball
+  - action: action_ask_shoes_basketball
+
+- story: interactive_story_0.3
+  steps:
+  - intent: ask_user_is_good
+  - action: utter_ask_user_is_good
+  - intent: ask_shoes_football
+  - action: action_ask_shoes_football
+
 - story: interactive_story_1
   steps:
   - intent: ask_user_is_good

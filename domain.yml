@@ -4,6 +4,9 @@ session_config:
   carry_over_slots_to_new_session: true
 intents:
 - ask_shoes_jordans
+- ask_shoes_running
+- ask_shoes_basketball
+- ask_shoes_football
 - deny
 - ask_user_is_good
 - greet
@@ -359,6 +362,9 @@ responses:
   - text: Could you rephrase your message? I didn't get it, I'm sorry.
 actions:
 - action_ask_shoes_jordans
+- action_ask_shoes_running
+- action_ask_shoes_basketball
+- action_ask_shoes_football
 - action_all_actions
 - action_ask_assesment_info
 - action_ask_first_pdf

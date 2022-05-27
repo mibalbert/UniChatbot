@@ -8,6 +8,30 @@ nlu:
     - gimme some jordans baby
     - can you please show me some jordans
 
+- intent: ask_shoes_running
+  examples: |
+    - Show me the running shoes
+    - Running shes
+    - gimme some runners baby
+    - can you please show me some running shoes baby
+    - let me see some running shoes
+
+- intent: ask_shoes_basketball
+  examples: |
+    - Show me the basketabll shoes please 
+    - basketball shoes
+    - shoes made for basket
+    - gimme some basketball shoes baby
+    - can you please show me some basketball shoes
+
+- intent: ask_shoes_football
+  examples: |
+    - Show me the football shoes please 
+    - football
+    - gimme some football shoes baby
+    - can you please show me some ball shoes
+    - show me some goally shows m'a G
+
 - intent: affirm
   examples: |
     - Accept
