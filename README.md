@@ -32,7 +32,7 @@ Try and see the installation videos on YT made by Rasa
     
     - "conda activate rasa30"   #activates the new enviroment
     
-  ### installing packages
+  ### Installing packages:
     
     - "conda install ujson"
     
@@ -40,9 +40,10 @@ Try and see the installation videos on YT made by Rasa
     
     - "pip install rasa==3.0.8"  #after installing check if rasa is 3.0.8 with the command "rasa --version"
     
-  ### installing packages for Selenium webscrapping (Not enabled anymore as the timetable is empty)
+  ### Installing packages for Selenium webscrapping (Not enabled anymore as the timetable is empty)
     
     - "pip install selenium"
+    
     - download chromedriver from here:
     https://chromedriver.chromium.org/downloads
     *Match the chromedriver with your Google Chrome version
@@ -56,5 +57,7 @@ Try and see the installation videos on YT made by Rasa
   
   Open 2 powershell teminals inside the folder containing this project
   Type the folling two commands:
-  - "rasa run actions"  #will run the actions server on one terminal
-  - "rasa shell"   #you will interact with the bot in the other terminal
+  
+    - "rasa run actions"  #will run the actions server on one terminal
+    
+    - "rasa shell"   #you will interact with the bot in the other terminal
