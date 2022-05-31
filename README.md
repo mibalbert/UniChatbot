@@ -1,4 +1,4 @@
-# RasaChatbot
+# RasaChatbot project
 
 ## Guide
 
@@ -8,14 +8,14 @@ https://visualstudio.microsoft.com/visual-cpp-build-tools/
 
 Try and see the installation videos on YT made by Rasa 
 
-### To get started with this project.
+## To get started with this project.
 
-Step 1 - Clone this repo inside a folder of your choosing on your machine.
+### Step 1 - Clone this repo inside a folder of your choosing on your machine.
   Create a folder on your computer.
   
   Type this command "git clone https://github.coventry.ac.uk/302CEM-2122/Team-jellyfish.git"
   
-Step 2 - Creating a virtual enviroment & installing dependencies.
+### Step 2 - Creating a virtual enviroment & installing dependencies.
 
   Download & install Miniconda : https://docs.conda.io/en/latest/miniconda.html
   
@@ -24,13 +24,15 @@ Step 2 - Creating a virtual enviroment & installing dependencies.
   
   Inside Powershell type the following comands:
     
+  ### Create the virtual enviroment:
+  
     - "conda init"   #should change the begining of the prompt line with (base)
     
     - "conda create -n rasa30 python==3.8"   #creates the env with python 3.8
     
     - "conda activate rasa30"   #activates the new enviroment
     
-    #installing packages
+  ### installing packages
     
     - "conda install ujson"
     
@@ -38,7 +40,7 @@ Step 2 - Creating a virtual enviroment & installing dependencies.
     
     - "pip install rasa==3.0.8"  #after installing check if rasa is 3.0.8 with the command "rasa --version"
     
-    #installing packages for webscrapping
+  ### installing packages for Selenium webscrapping (Not enabled anymore as the timetable is empty)
     
     - "pip install selenium"
     - download chromedriver from here:
@@ -48,7 +50,9 @@ Step 2 - Creating a virtual enviroment & installing dependencies.
     - add the chromedriver in C: (maybe inside a folder) , after that replace the 
     path in actions.py at line 31, with your path to the chromedriver.
     
-Step 3 - Running the project in the terminal.
+    
+    
+## Step 3 - Running the project in the terminal.
   
   Open 2 powershell teminals inside the folder containing this project
   Type the folling two commands:
