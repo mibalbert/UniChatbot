@@ -28,25 +28,25 @@ Try and see the installation videos on YT made by Rasa
 
   ### Create the virtual enviroment:
   
-    - "conda init"   #should change the begining of the prompt line with (base)
+    conda init  - should change the begining of the prompt line with (base)
     
-    - "conda create -n rasa30 python==3.8"   #creates the env with python 3.8
+    conda create -n rasa30 python==3.8  - creates the env with python 3.8 , the rasa30 is the name of the new vienv
     
-    - "conda activate rasa30"   #activates the new enviroment
+    conda activate rasa30  - activates the new enviroment
 
 
   ### Installing packages:
     
-    - "conda install ujson"
+    conda install ujson
     
-    - "conda install tensorflow"
+    conda install tensorflow
     
-    - "pip install rasa==3.0.8"  #after installing check if rasa is 3.0.8 with the command "rasa --version"
+    pip install rasa==3.1.0  - after installing check if rasa is 3.0.8 with the command "rasa --version"
 
 
   ### Installing packages for Selenium webscrapping (Not enabled anymore as the timetable is empty)
     
-    - "pip install selenium"
+    pip install selenium
     
     - download chromedriver from here:
     https://chromedriver.chromium.org/downloads
@@ -61,6 +61,6 @@ Try and see the installation videos on YT made by Rasa
   Open 2 powershell teminals inside the folder containing this project
   Type the folling two commands:
   
-    - "rasa run actions"  #will run the actions server on one terminal
+    rasa run actions  - will run the actions server on one terminal
     
-    - "rasa shell"   #you will interact with the bot in the other terminal
+    rasa shell  - you will interact with the bot in the other terminal
