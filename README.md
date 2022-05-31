@@ -19,11 +19,8 @@ Try and see the installation videos on YT made by Rasa
 
   Download & install Miniconda : https://docs.conda.io/en/latest/miniconda.html
   
-  Open Powershell which is the most "user-friendly" in my opinion terminal for windows users.
-  **Just search in the search bar for "Powershell"
-
-
-  Inside Powershell type the following comands:
+  
+###  Inside Powershell type the following comands:
 
 
   ### Create the virtual enviroment:
