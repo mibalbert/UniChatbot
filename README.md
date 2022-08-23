@@ -60,7 +60,7 @@ Try and see the installation videos on YT made by Rasa
 ## Step 3 - Running the project in the terminal.
   
   Open 2 powershell teminals inside the folder containing this project
-  Type the folling two commands:
+  and type the following two commands:
   
     rasa run actions  - will run the actions server on one terminal
     
